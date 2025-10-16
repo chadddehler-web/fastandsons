@@ -15,7 +15,7 @@ export default function Home() {
     if (!input.trim()) return;
     appendMessage(input, "user");
     setInput("");
-    appendMessage("Fast & Son AI is typing...", "bot");
+    appendMessage("Fast & Son Roofing AI is typing...", "bot");
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
@@ -25,7 +25,8 @@ export default function Home() {
       const data = await res.json();
       setMessages((prev) =>
         prev.map((msg) =>
-          msg.sender === "bot" && msg.text === "Fast & Son AI is typing..."
+          msg.sender === "bot" &&
+          msg.text === "Fast & Son Roofing AI is typing..."
             ? { text: data.reply, sender: "bot" }
             : msg
         )
@@ -33,7 +34,8 @@ export default function Home() {
     } catch {
       setMessages((prev) =>
         prev.map((msg) =>
-          msg.sender === "bot" && msg.text === "Fast & Son AI is typing..."
+          msg.sender === "bot" &&
+          msg.text === "Fast & Son Roofing AI is typing..."
             ? { text: "Error: Could not get response", sender: "bot" }
             : msg
         )
@@ -43,88 +45,82 @@ export default function Home() {
 
   return (
     <>
+      {/* Navbar */}
       <nav className="bg-orange-600 text-white flex justify-between items-center p-4 sticky top-0 z-50 shadow-lg">
-        <h1 className="text-xl m-0 font-semibold">Fast & Son Roofing</h1>
+        <h1 className="text-xl m-0 font-semibold">Fast and Son Roofing</h1>
         <ul className="flex gap-5 m-0 p-0 list-none">
           <li><a href="#home" className="hover:text-yellow-100 font-medium">Home</a></li>
-          <li><a href="#services" className="hover:text-yellow-100 font-medium">Services</a></li>
+          <li><a href="#about" className="hover:text-yellow-100 font-medium">About Us</a></li>
           <li><a href="#contact" className="hover:text-yellow-100 font-medium">Contact</a></li>
         </ul>
       </nav>
 
-      <header id="home" className="relative text-white text-center py-28">
+      {/* Hero */}
+      <header id="home" className="relative text-white text-center py-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80"
-          alt="Roofing hero"
+          alt="Roofing banner"
           layout="fill"
           objectFit="cover"
           className="z-0 brightness-75"
         />
-        <div className="relative z-10">
-          <h2 className="text-5xl font-bold mb-4">Raising the Standard in Roofing</h2>
-          <p className="text-lg max-w-2xl mx-auto">
-            Family owned and operated for over 25 years — reliable roofing services you can trust.
+        <div className="relative z-10 px-5">
+          <h2 className="text-5xl font-bold mb-4 drop-shadow-lg">
+            Raising the Standard in Roofing
+          </h2>
+          <p className="text-lg max-w-2xl mx-auto drop-shadow">
+            Family owned and operated. Serving Portland, OR and the surrounding areas.
           </p>
         </div>
       </header>
 
-      <section id="services" className="py-16 text-center bg-orange-50">
-        <h3 className="text-4xl font-bold mb-10 text-gray-900">Our Services</h3>
-        <div className="flex flex-wrap justify-center gap-10 px-5">
-          <div className="bg-white shadow-lg rounded-2xl overflow-hidden w-80">
-            <Image
-              src="https://tse1.mm.bing.net/th/id/OIP.2V_-eijYyATc4sS_cO7nMAHaE8?pid=Api"
-              alt="Roof Repair"
-              width={400}
-              height={250}
-              className="object-cover w-full h-52"
-            />
-            <div className="p-5">
-              <h4 className="text-xl font-semibold text-orange-700 mb-2">Roof Repair</h4>
-              <p className="text-gray-600">Fix leaks, missing shingles, and storm damage fast.</p>
-            </div>
-          </div>
-
-          <div className="bg-white shadow-lg rounded-2xl overflow-hidden w-80">
-            <Image
-              src="https://tse2.mm.bing.net/th/id/OIP.IZgIGRWFPx1PsMsW6HqBNAHaE7?pid=Api"
-              alt="Roofing Work"
-              width={400}
-              height={250}
-              className="object-cover w-full h-52"
-            />
-            <div className="p-5">
-              <h4 className="text-xl font-semibold text-orange-700 mb-2">Roof Replacement</h4>
-              <p className="text-gray-600">
-                Durable materials, expert craftsmanship, and guaranteed results.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-white shadow-lg rounded-2xl overflow-hidden w-80">
-            <Image
-              src="https://images.unsplash.com/photo-1590337164801-b7b1f72f0935?auto=format&fit=crop&w=1600&q=80"
-              alt="Gutters and Drainage"
-              width={400}
-              height={250}
-              className="object-cover w-full h-52"
-            />
-            <div className="p-5">
-              <h4 className="text-xl font-semibold text-orange-700 mb-2">Gutters & Drainage</h4>
-              <p className="text-gray-600">
-                Keep your property safe from water damage with expert drainage systems.
-              </p>
-            </div>
-          </div>
-        </div>
+      {/* Intro */}
+      <section className="py-20 bg-white text-center px-6">
+        <h3 className="text-3xl font-bold mb-6 text-gray-900">
+          Raising the Standard in Roofing
+        </h3>
+        <p className="max-w-3xl mx-auto text-gray-700 mb-4">
+          Fast & Son Roofing is family owned and operated. We serve Portland, OR and the
+          surrounding areas. With over 25 years of roofing experience, we offer reliable
+          and proven roofing materials and systems installed by skilled technicians.
+        </p>
+        <p className="max-w-3xl mx-auto text-gray-700">
+          We work with a wide range of roofing materials such as asphalt shingles, flat
+          roofing products, metal, and artificial cedar shake roofs to meet your needs.
+          To ensure your peace of mind, our work is backed by maximum warranty coverage.
+        </p>
+        <button className="mt-8 bg-orange-600 text-white px-8 py-3 rounded-lg hover:bg-orange-500 transition">
+          Learn More
+        </button>
       </section>
 
-      <section className="py-16 text-center bg-white">
-        <h3 className="text-4xl font-bold mb-6 text-gray-900">About Us</h3>
-        <p className="max-w-2xl mx-auto text-gray-700 mb-10">
-          Fast & Son Roofing is a family-owned company serving Portland and surrounding areas.
-          With 25+ years of experience, we specialize in roof repair, replacement, and gutter
-          installation. All backed by maximum warranty coverage.
+      {/* Complete Services */}
+      <section className="bg-gray-50 py-20 px-6 text-center">
+        <h3 className="text-3xl font-bold mb-6 text-gray-900">
+          Complete Roofing Services for Homes and Businesses
+        </h3>
+        <p className="max-w-3xl mx-auto text-gray-700 mb-8">
+          At Fast and Son Roofing, we offer a full range of services for both homeowners
+          and businesses. Whether you need a roof repair, roof replacement, or new
+          gutters — call us. We are dedicated to serving our community with honesty,
+          craftsmanship, and care.
+        </p>
+        <Image
+          src="https://images.unsplash.com/photo-1581093448798-5db8d2e5d99f?auto=format&fit=crop&w=1600&q=80"
+          alt="Roofing at work"
+          width={900}
+          height={500}
+          className="rounded-2xl mx-auto shadow-lg"
+        />
+      </section>
+
+      {/* About */}
+      <section id="about" className="py-20 bg-white text-center px-6">
+        <h3 className="text-3xl font-bold mb-6 text-gray-900">We’re Committed to Excellence</h3>
+        <p className="max-w-3xl mx-auto text-gray-700 mb-10">
+          As a family-owned roofing company, Fast and Son Roofing can help you with any
+          roofing issues. From small repairs to full replacements, we focus on quality,
+          communication, and long-lasting results.
         </p>
         <Image
           src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
@@ -135,16 +131,21 @@ export default function Home() {
         />
       </section>
 
-      <section id="contact" className="py-16 text-center bg-orange-50">
-        <h3 className="text-3xl font-bold mb-3 text-gray-900">Get In Touch</h3>
-        <p className="text-gray-700">📞 (503) 254-2046</p>
-        <p className="text-gray-700">
-          📍 18022 SE Clay St, Portland, OR 97233
-        </p>
+      {/* Contact */}
+      <section id="contact" className="py-20 text-center bg-orange-50">
+        <h3 className="text-3xl font-bold mb-4 text-gray-900">Get In Touch</h3>
+        <p className="text-gray-700 mb-2">📞 (503) 254-2046</p>
+        <p className="text-gray-700 mb-2">📍 18022 SE Clay St, Portland, OR 97233</p>
+        <p className="text-gray-700 mb-2">✉️ fastandsonroofing@gmail.com</p>
+        <p className="text-gray-700">USA</p>
       </section>
 
-      <footer className="bg-gray-900 text-gray-400 text-center py-6">
-        © {new Date().getFullYear()} Fast & Son Roofing • Portland, OR
+      {/* Footer */}
+      <footer className="bg-gray-900 text-gray-400 text-center py-6 text-sm">
+        © {new Date().getFullYear()} Fast and Son Roofing • Portland, OR<br />
+        <span className="italic text-gray-500">
+          Website inspired by original WordPress.com design
+        </span>
       </footer>
 
       {/* Chatbot Widget */}
