@@ -68,9 +68,15 @@ export default function Home() {
           <h2 className="text-5xl font-bold mb-4 drop-shadow-lg">
             Raising the Standard in Roofing
           </h2>
-          <p className="text-lg max-w-2xl mx-auto drop-shadow">
-            Family owned and operated. Serving Portland, OR and the surrounding areas.
+          <p className="text-lg max-w-2xl mx-auto drop-shadow mb-8">
+            Family owned and operated. Serving Portland, OR and the surrounding areas for over 25 years.
           </p>
+          <a
+            href="#contact"
+            className="bg-yellow-400 text-gray-900 font-semibold px-8 py-3 rounded-lg hover:bg-yellow-300 transition shadow-lg"
+          >
+            Get a Free Estimate
+          </a>
         </div>
       </header>
 
@@ -89,12 +95,9 @@ export default function Home() {
           roofing products, metal, and artificial cedar shake roofs to meet your needs.
           To ensure your peace of mind, our work is backed by maximum warranty coverage.
         </p>
-        <button className="mt-8 bg-orange-600 text-white px-8 py-3 rounded-lg hover:bg-orange-500 transition">
-          Learn More
-        </button>
       </section>
 
-      {/* Complete Services */}
+      {/* Services */}
       <section className="bg-gray-50 py-20 px-6 text-center">
         <h3 className="text-3xl font-bold mb-6 text-gray-900">
           Complete Roofing Services for Homes and Businesses
@@ -132,12 +135,51 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-20 text-center bg-orange-50">
-        <h3 className="text-3xl font-bold mb-4 text-gray-900">Get In Touch</h3>
-        <p className="text-gray-700 mb-2">📞 (503) 254-2046</p>
-        <p className="text-gray-700 mb-2">📍 18022 SE Clay St, Portland, OR 97233</p>
-        <p className="text-gray-700 mb-2">✉️ fastandsonroofing@gmail.com</p>
-        <p className="text-gray-700">USA</p>
+      <section id="contact" className="py-20 bg-orange-50 px-6">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+          <div>
+            <h3 className="text-3xl font-bold mb-4 text-gray-900">Get Your Free Roofing Estimate</h3>
+            <p className="text-gray-700 mb-6">
+              Fill out the quick form and we’ll reach out to schedule your free roofing estimate.
+              Or call us directly — we’re happy to help with any roofing questions.
+            </p>
+            <form
+              className="bg-white shadow-lg rounded-xl p-6 space-y-4 text-left"
+              onSubmit={(e) => e.preventDefault()}
+            >
+              <div>
+                <label className="block text-sm font-semibold mb-1">Full Name</label>
+                <input type="text" placeholder="John Doe" className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-orange-500 outline-none"/>
+              </div>
+              <div>
+                <label className="block text-sm font-semibold mb-1">Phone Number</label>
+                <input type="tel" placeholder="(503) 123-4567" className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-orange-500 outline-none"/>
+              </div>
+              <div>
+                <label className="block text-sm font-semibold mb-1">Email</label>
+                <input type="email" placeholder="you@example.com" className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-orange-500 outline-none"/>
+              </div>
+              <div>
+                <label className="block text-sm font-semibold mb-1">Message</label>
+                <textarea placeholder="Tell us about your project..." rows="3" className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-orange-500 outline-none"></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-orange-600 text-white py-2 rounded-md hover:bg-orange-500 transition"
+              >
+                Request Free Estimate
+              </button>
+            </form>
+          </div>
+
+          <div className="text-center md:text-left">
+            <h4 className="text-2xl font-bold mb-4 text-gray-900">Contact Info</h4>
+            <p className="text-gray-700 mb-2">📞 (503) 254-2046</p>
+            <p className="text-gray-700 mb-2">📍 18022 SE Clay St, Portland, OR 97233</p>
+            <p className="text-gray-700 mb-2">✉️ fastandsonroofing@gmail.com</p>
+            <p className="text-gray-700">Open Monday–Saturday, 8 AM – 6 PM</p>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
