@@ -111,8 +111,8 @@ export default function Home() {
           craftsmanship, and care.
         </p>
         <img
-          src="https://images.unsplash.com/photo-1596496050974-058a1e6fa74b?auto=format&fit=crop&w=1600&q=80"
-          alt="Roofers working"
+          src="https://static.vecteezy.com/system/resources/thumbnails/039/591/667/small_2x/ai-generated-professional-roofer-installing-metal-roof-on-a-roof-generative-ai-photo.jpg"
+          alt="Professional roofer installing metal roof"
           className="rounded-2xl mx-auto shadow-lg w-full max-w-3xl"
         />
       </section>
