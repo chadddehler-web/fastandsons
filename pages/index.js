@@ -55,7 +55,7 @@ export default function Home() {
         </ul>
       </nav>
 
-      {/* Hero */}
+      {/* Hero Section */}
       <header id="home" className="relative text-white text-center py-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80"
@@ -66,10 +66,10 @@ export default function Home() {
         />
         <div className="relative z-10 px-5">
           <h2 className="text-5xl font-bold mb-4 drop-shadow-lg">
-            Raising the Standard in Roofing
+            Trusted Roofing Experts Serving Portland for Over 25 Years
           </h2>
           <p className="text-lg max-w-2xl mx-auto drop-shadow mb-8">
-            Family owned and operated. Serving Portland, OR and the surrounding areas for over 25 years.
+            Family-owned and operated — delivering reliable roofing solutions that protect your home and business.
           </p>
           <a
             href="#contact"
@@ -80,10 +80,10 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Intro */}
+      {/* Intro Section */}
       <section className="py-20 bg-white text-center px-6">
         <h3 className="text-3xl font-bold mb-6 text-gray-900">
-          Raising the Standard in Roofing
+          Quality You Can Trust
         </h3>
         <p className="max-w-3xl mx-auto text-gray-700 mb-4">
           Fast & Son Roofing is family owned and operated. We serve Portland, OR and the
@@ -97,7 +97,7 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Services */}
+      {/* Services Section */}
       <section className="bg-gray-50 py-20 px-6 text-center">
         <h3 className="text-3xl font-bold mb-6 text-gray-900">
           Complete Roofing Services for Homes and Businesses
@@ -109,7 +109,7 @@ export default function Home() {
           craftsmanship, and care.
         </p>
         <Image
-          src="https://images.unsplash.com/photo-1581093448798-5db8d2e5d99f?auto=format&fit=crop&w=1600&q=80"
+          src="https://images.unsplash.com/photo-1594938298603-c8148c323e86?auto=format&fit=crop&w=1600&q=80"
           alt="Roofing at work"
           width={900}
           height={500}
@@ -117,7 +117,7 @@ export default function Home() {
         />
       </section>
 
-      {/* About */}
+      {/* About Section */}
       <section id="about" className="py-20 bg-white text-center px-6">
         <h3 className="text-3xl font-bold mb-6 text-gray-900">We’re Committed to Excellence</h3>
         <p className="max-w-3xl mx-auto text-gray-700 mb-10">
@@ -134,7 +134,7 @@ export default function Home() {
         />
       </section>
 
-      {/* Contact */}
+      {/* Contact Section */}
       <section id="contact" className="py-20 bg-orange-50 px-6">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-start">
           <div>
