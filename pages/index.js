@@ -85,6 +85,13 @@ export default function Home() {
         <h3 className="text-3xl font-bold mb-6 text-gray-900">
           Quality You Can Trust
         </h3>
+        <Image
+          src="https://tse4.mm.bing.net/th/id/OIP.2yQggm8ThLiA-ipOV9w8PAHaE8?cb=12&w=474&h=474&c=7&p=0"
+          alt="Roofing you can trust"
+          width={900}
+          height={500}
+          className="rounded-2xl mx-auto shadow-lg mb-8"
+        />
         <p className="max-w-3xl mx-auto text-gray-700 mb-4">
           Fast & Son Roofing is family owned and operated. We serve Portland, OR and the
           surrounding areas. With over 25 years of roofing experience, we offer reliable
