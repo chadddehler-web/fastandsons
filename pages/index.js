@@ -96,17 +96,17 @@ export default function Home() {
             {
               title: "Roof Repair",
               desc: "Fix leaks, missing shingles, and storm damage fast.",
-              img: "https://images.unsplash.com/photo-1601905390820-6fef03cc3f1e?auto=format&fit=crop&w=1200&q=80",
+              img: "https://cdn.pixabay.com/photo/2017/05/30/03/46/roof-2353008_1280.jpg",
             },
             {
               title: "Roof Replacement",
               desc: "Durable materials, expert craftsmanship, and guaranteed work.",
-              img: "https://images.unsplash.com/photo-1597001731441-d5f69a3e7b46?auto=format&fit=crop&w=1200&q=80",
+              img: "https://cdn.pixabay.com/photo/2016/11/29/10/07/roof-1867187_1280.jpg",
             },
             {
               title: "Gutters & Drainage",
               desc: "Protect your home with seamless gutters and proper drainage.",
-              img: "https://images.unsplash.com/photo-1602526216433-6b3d8e93e98d?auto=format&fit=crop&w=1200&q=80",
+              img: "https://cdn.pixabay.com/photo/2016/04/19/19/59/gutter-1336359_1280.jpg",
             },
           ].map((svc, i) => (
             <div
@@ -146,8 +146,8 @@ export default function Home() {
             backed by our workmanship warranty and attention to detail.
           </p>
           <img
-            src="https://images.unsplash.com/photo-1577904857267-9f3ac33a95f8?auto=format&fit=crop&w=1200&q=80"
-            alt="Roofing crew working"
+            src="https://cdn.pixabay.com/photo/2015/09/18/11/36/roof-944667_1280.jpg"
+            alt="Roofing team at work"
             crossOrigin="anonymous"
             loading="lazy"
             className="rounded-xl shadow-xl mx-auto mb-10 w-full max-w-3xl"
