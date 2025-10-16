@@ -83,7 +83,7 @@ export default function Home() {
           Quality You Can Trust
         </h3>
         <img
-          src="https://tse4.mm.bing.net/th/id/OIP.2yQggm8ThLiA-ipOV9w8PAHaE8?cb=12&w=474&h=474&c=7&p=0"
+          src="https://images.unsplash.com/photo-1603575448363-3f04b63d8c4d?auto=format&fit=crop&w=1600&q=80"
           alt="Roofing you can trust"
           className="rounded-2xl mx-auto shadow-lg mb-8 w-full max-w-3xl"
         />
@@ -111,7 +111,7 @@ export default function Home() {
           craftsmanship, and care.
         </p>
         <img
-          src="https://images.unsplash.com/photo-1596496050974-058a1e6fa74b?auto=format&fit=crop&w=1600&q=80"
+          src="https://images.unsplash.com/photo-1601758125946-6ec2ef642f97?auto=format&fit=crop&w=1600&q=80"
           alt="Roofers working"
           className="rounded-2xl mx-auto shadow-lg w-full max-w-3xl"
         />
@@ -126,7 +126,7 @@ export default function Home() {
           communication, and long-lasting results.
         </p>
         <img
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+          src="https://images.unsplash.com/photo-1621905251918-3e7a8b0c4a57?auto=format&fit=crop&w=1600&q=80"
           alt="Roofing Team"
           className="rounded-2xl mx-auto shadow-lg w-full max-w-3xl"
         />
