@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "next/image";
 
 export default function Home() {
   const [messages, setMessages] = useState([]);
@@ -57,12 +56,10 @@ export default function Home() {
 
       {/* Hero Section */}
       <header id="home" className="relative text-white text-center py-28 overflow-hidden">
-        <Image
+        <img
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80"
           alt="Roofing banner"
-          layout="fill"
-          objectFit="cover"
-          className="z-0 brightness-75"
+          className="absolute inset-0 w-full h-full object-cover brightness-75"
         />
         <div className="relative z-10 px-5">
           <h2 className="text-5xl font-bold mb-4 drop-shadow-lg">
@@ -85,12 +82,10 @@ export default function Home() {
         <h3 className="text-3xl font-bold mb-6 text-gray-900">
           Quality You Can Trust
         </h3>
-        <Image
+        <img
           src="https://tse4.mm.bing.net/th/id/OIP.2yQggm8ThLiA-ipOV9w8PAHaE8?cb=12&w=474&h=474&c=7&p=0"
           alt="Roofing you can trust"
-          width={900}
-          height={500}
-          className="rounded-2xl mx-auto shadow-lg mb-8"
+          className="rounded-2xl mx-auto shadow-lg mb-8 w-full max-w-3xl"
         />
         <p className="max-w-3xl mx-auto text-gray-700 mb-4">
           Fast & Son Roofing is family owned and operated. We serve Portland, OR and the
@@ -115,12 +110,10 @@ export default function Home() {
           gutters — call us. We are dedicated to serving our community with honesty,
           craftsmanship, and care.
         </p>
-        <Image
+        <img
           src="https://images.unsplash.com/photo-1596496050974-058a1e6fa74b?auto=format&fit=crop&w=1600&q=80"
           alt="Roofers working"
-          width={900}
-          height={500}
-          className="rounded-2xl mx-auto shadow-lg"
+          className="rounded-2xl mx-auto shadow-lg w-full max-w-3xl"
         />
       </section>
 
@@ -132,12 +125,10 @@ export default function Home() {
           roofing issues. From small repairs to full replacements, we focus on quality,
           communication, and long-lasting results.
         </p>
-        <Image
+        <img
           src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
           alt="Roofing Team"
-          width={900}
-          height={500}
-          className="rounded-2xl mx-auto shadow-lg"
+          className="rounded-2xl mx-auto shadow-lg w-full max-w-3xl"
         />
       </section>
 
