@@ -66,7 +66,7 @@ export default function Home() {
         />
         <div className="relative z-10 px-5">
           <h2 className="text-5xl font-bold mb-4 drop-shadow-lg">
-            Trusted Roofing Experts Serving Portland for Over 25 Years
+            Trust us — Raising the standard in roofing.
           </h2>
           <p className="text-lg max-w-2xl mx-auto drop-shadow mb-8">
             Family-owned and operated — delivering reliable roofing solutions that protect your home and business.
@@ -83,7 +83,7 @@ export default function Home() {
       {/* Intro Section */}
       <section className="py-20 bg-white text-center px-6">
         <h3 className="text-3xl font-bold mb-6 text-gray-900">
-          Quality You Can Trust
+          Raising the standard in roofing.
         </h3>
         <p className="max-w-3xl mx-auto text-gray-700 mb-4">
           Fast & Son Roofing is family owned and operated. We serve Portland, OR and the
@@ -109,8 +109,8 @@ export default function Home() {
           craftsmanship, and care.
         </p>
         <Image
-          src="https://images.unsplash.com/photo-1594938298603-c8148c323e86?auto=format&fit=crop&w=1600&q=80"
-          alt="Roofing at work"
+          src="https://images.unsplash.com/photo-1601333146118-5fce0b92b9b6?auto=format&fit=crop&w=1600&q=80"
+          alt="Roofers working"
           width={900}
           height={500}
           className="rounded-2xl mx-auto shadow-lg"
@@ -207,7 +207,7 @@ export default function Home() {
               {messages.map((msg, i) => (
                 <div
                   key={i}
-                  className={`my-1 p-2 rounded-lg text-sm ${
+                  className={`my-1 p-2 rounded-lg text-small ${
                     msg.sender === "user"
                       ? "bg-orange-600 text-white self-end ml-auto max-w-[80%]"
                       : "bg-gray-100 text-gray-900 self-start mr-auto max-w-[80%]"
