@@ -81,17 +81,17 @@ export default function Home() {
             {
               title: "Roof Repair",
               desc: "Fix leaks, missing shingles, and storm damage fast.",
-              img: "https://images.unsplash.com/photo-1581091308483-1726bc7039ef?auto=format&fit=crop&w=800&q=80",
+              img: "https://images.unsplash.com/photo-1600585154154-1fe22b7c0d7a?auto=format&fit=crop&w=1600&q=80",
             },
             {
               title: "Roof Replacement",
               desc: "Durable materials, expert craftsmanship, and guaranteed work.",
-              img: "https://images.unsplash.com/photo-1567016432779-5f16118c8b0b?auto=format&fit=crop&w=800&q=80",
+              img: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1600&q=80",
             },
             {
               title: "Gutters & Drainage",
               desc: "Protect your home with seamless gutters and proper drainage.",
-              img: "https://images.unsplash.com/photo-1590337164801-b7b1f72f0935?auto=format&fit=crop&w=800&q=80",
+              img: "https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=1600&q=80",
             },
           ].map((svc, i) => (
             <div key={i} className="rounded-2xl shadow-lg overflow-hidden border border-orange-100 hover:shadow-2xl transition">
@@ -122,7 +122,7 @@ export default function Home() {
           </p>
           <div className="relative w-full max-w-3xl h-80 mx-auto mb-10 rounded-xl shadow-xl overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1553076444-5b4e1807ffd9?auto=format&fit=crop&w=1200&q=80"
+              src="https://images.unsplash.com/photo-1600585153847-26b4e61b8b13?auto=format&fit=crop&w=1600&q=80"
               alt="Roofing team at work"
               fill
               sizes="(max-width: 1024px) 100vw, 800px"
@@ -136,14 +136,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact (keep image as <img>) */}
+      {/* Contact */}
       <section id="contact" className="py-20 px-6 bg-white text-center border-t border-orange-100">
         <h3 className="text-4xl font-bold mb-6 text-orange-700">Get in Touch</h3>
         <img
           src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80"
           alt="House roof"
-          crossOrigin="anonymous"
-          loading="lazy"
           className="rounded-xl shadow-md mx-auto mb-8 w-full max-w-3xl"
         />
         <div className="max-w-xl mx-auto text-lg text-gray-700 space-y-3">
@@ -157,45 +155,6 @@ export default function Home() {
       <footer className="bg-gray-900 text-gray-400 text-center py-6">
         <p>© {new Date().getFullYear()} Fast & Son Roofing • Portland, OR</p>
       </footer>
-
-      {/* Chatbot Widget */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="bg-orange-600 text-white rounded-full p-4 shadow-lg hover:bg-orange-500 transition"
-        >
-          💬
-        </button>
-        {isOpen && (
-          <div className="bg-white shadow-2xl rounded-xl w-80 mt-3 overflow-hidden border border-gray-200 flex flex-col">
-            <div className="bg-orange-600 text-white text-center font-semibold py-2">Fast & Son Roofing AI</div>
-            <div className="flex-1 p-3 overflow-y-auto max-h-64">
-              {messages.map((msg, i) => (
-                <div
-                  key={i}
-                  className={`my-1 p-2 rounded-lg text-sm ${
-                    msg.sender === "user"
-                      ? "bg-orange-600 text-white self-end ml-auto max-w-[80%]"
-                      : "bg-gray-100 text-gray-900 self-start mr-auto max-w-[80%]"
-                  }`}
-                >
-                  {msg.text}
-                </div>
-              ))}
-            </div>
-            <form onSubmit={handleSubmit} className="flex border-t border-gray-300">
-              <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="Type a message..."
-                className="flex-1 p-2 text-sm outline-none"
-              />
-              <button type="submit" className="bg-orange-600 text-white px-4 hover:bg-orange-500 transition">Send</button>
-            </form>
-          </div>
-        )}
-      </div>
     </div>
   );
 }
