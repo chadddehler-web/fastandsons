@@ -96,17 +96,17 @@ export default function Home() {
             {
               title: "Roof Repair",
               desc: "Fix leaks, missing shingles, and storm damage fast.",
-              img: "https://images.unsplash.com/photo-1622026430470-7728c78b8a17?auto=format&fit=crop&w=800&q=80",
+              img: "https://cdn.pixabay.com/photo/2017/05/30/03/46/roof-2353008_1280.jpg",
             },
             {
               title: "Roof Replacement",
               desc: "Durable materials, expert craftsmanship, and guaranteed work.",
-              img: "https://images.unsplash.com/photo-1597007518771-26c3d424bdbb?auto=format&fit=crop&w=800&q=80",
+              img: "https://cdn.pixabay.com/photo/2016/11/29/10/07/roof-1867187_1280.jpg",
             },
             {
               title: "Gutters & Drainage",
               desc: "Protect your home with seamless gutters and proper drainage.",
-              img: "https://images.unsplash.com/photo-1615938338204-9b558b8c3f30?auto=format&fit=crop&w=800&q=80",
+              img: "https://cdn.pixabay.com/photo/2016/04/19/19/59/gutter-1336359_1280.jpg",
             },
           ].map((svc, i) => (
             <div
@@ -145,7 +145,7 @@ export default function Home() {
           </p>
           <img
             src="https://images.unsplash.com/photo-1581092160562-40aa08e78834?auto=format&fit=crop&w=1200&q=80"
-            alt="Team at work"
+            alt="Roofing team at work"
             className="rounded-xl shadow-xl mx-auto mb-10 w-full max-w-3xl"
           />
           <h4 className="text-2xl font-semibold text-gray-800 mt-6">
