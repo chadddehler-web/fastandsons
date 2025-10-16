@@ -64,7 +64,7 @@ export default function Home() {
       {/* --- Hero Section --- */}
       <header
         id="home"
-        className="relative bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1500&q=80')] bg-cover bg-center text-white flex flex-col items-center justify-center text-center h-[70vh]"
+        className="relative bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center text-white flex flex-col items-center justify-center text-center h-[75vh]"
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 px-6 max-w-3xl">
@@ -74,8 +74,8 @@ export default function Home() {
           <p className="text-lg mb-8">
             Fast & Son Roofing is family owned and operated. We serve Portland,
             OR and the surrounding areas. With over 25 years of roofing
-            experience, we offer reliable and proven roofing materials and
-            systems by skilled technicians.
+            experience, we offer reliable and proven materials and systems by
+            skilled technicians.
           </p>
           <a
             href="#about"
@@ -86,33 +86,75 @@ export default function Home() {
         </div>
       </header>
 
+      {/* --- Services --- */}
+      <section id="services" className="py-20 px-6 bg-white text-center">
+        <h2 className="text-4xl font-bold mb-10 text-orange-700">
+          Complete Roofing Services
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {[
+            {
+              title: "Roof Repair",
+              desc: "Fix leaks, missing shingles, and storm damage fast.",
+              img: "https://images.unsplash.com/photo-1622026430470-7728c78b8a17?auto=format&fit=crop&w=800&q=80",
+            },
+            {
+              title: "Roof Replacement",
+              desc: "Durable materials, expert craftsmanship, and guaranteed work.",
+              img: "https://images.unsplash.com/photo-1597007518771-26c3d424bdbb?auto=format&fit=crop&w=800&q=80",
+            },
+            {
+              title: "Gutters & Drainage",
+              desc: "Protect your home with seamless gutters and proper drainage.",
+              img: "https://images.unsplash.com/photo-1615938338204-9b558b8c3f30?auto=format&fit=crop&w=800&q=80",
+            },
+          ].map((svc, i) => (
+            <div
+              key={i}
+              className="rounded-2xl shadow-lg overflow-hidden border border-orange-100 hover:shadow-2xl transition"
+            >
+              <img
+                src={svc.img}
+                alt={svc.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold text-orange-700 mb-2">
+                  {svc.title}
+                </h3>
+                <p className="text-gray-700">{svc.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* --- About Section --- */}
       <section
         id="about"
-        className="py-20 px-6 text-center bg-white border-t border-orange-100"
+        className="py-20 px-6 text-center bg-gradient-to-br from-gray-100 to-white"
       >
         <div className="max-w-4xl mx-auto">
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            We work with a wide range of roofing materials such as asphalt
-            shingles, flat roofing products, metal and artificial cedar shake
-            roofs to meet your needs. To ensure your peace of mind, our work is
-            backed by maximum warranty coverage.
-          </p>
-          <h3 className="text-3xl font-bold text-orange-700 mb-8">
-            Complete Roofing Services for Homes and Businesses
+          <h3 className="text-3xl font-bold text-orange-700 mb-6">
+            Why Homeowners Trust Us
           </h3>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            At Fast & Son Roofing, we offer a full range of services for both
-            homeowners and businesses. Whether you need a roof repair, roof
-            replacement, or new gutters, call us. We are dedicated to serving
-            our community.
+          <p className="text-lg text-gray-700 mb-10 leading-relaxed">
+            We work with a wide range of roofing materials such as asphalt,
+            metal, and flat roofing systems to meet your needs. Every project is
+            backed by our workmanship warranty and attention to detail.
           </p>
-          <h4 className="text-2xl font-semibold text-gray-800 mt-10">
-            About Us
+          <img
+            src="https://images.unsplash.com/photo-1581092160562-40aa08e78834?auto=format&fit=crop&w=1200&q=80"
+            alt="Team at work"
+            className="rounded-xl shadow-xl mx-auto mb-10 w-full max-w-3xl"
+          />
+          <h4 className="text-2xl font-semibold text-gray-800 mt-6">
+            Family-Owned. Portland Proud.
           </h4>
           <p className="text-gray-700 mt-3">
-            We’re committed to excellence. As a family-owned roofing company,
-            Fast and Son Roofing can help you with any roofing issues.
+            As a family-owned company, Fast & Son Roofing has served Portland
+            for over 25 years with honesty, integrity, and quality you can
+            count on.
           </p>
         </div>
       </section>
@@ -120,11 +162,16 @@ export default function Home() {
       {/* --- Contact Section --- */}
       <section
         id="contact"
-        className="py-20 px-6 bg-gradient-to-br from-orange-50 to-yellow-50 text-center"
+        className="py-20 px-6 bg-white text-center border-t border-orange-100"
       >
         <h3 className="text-4xl font-bold mb-6 text-orange-700">
           Get in Touch
         </h3>
+        <img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80"
+          alt="House roof"
+          className="rounded-xl shadow-md mx-auto mb-8 w-full max-w-3xl"
+        />
         <div className="max-w-xl mx-auto text-lg text-gray-700 space-y-3">
           <p>
             <strong>Phone:</strong> (503) 254-2046
