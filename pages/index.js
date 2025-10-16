@@ -6,6 +6,7 @@ export default function Home() {
   const [input, setInput] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
+  // ---- Chat logic ----
   const appendMessage = (text, sender) => {
     setMessages((prev) => [...prev, { text, sender }]);
   };
@@ -81,7 +82,7 @@ export default function Home() {
             {
               title: "Roof Repair",
               desc: "Fix leaks, missing shingles, and storm damage fast.",
-              img: "https://images.unsplash.com/photo-1600585154154-1fe22b7c0d7a?auto=format&fit=crop&w=1600&q=80",
+              img: "https://images.unsplash.com/photo-1600585153976-4b5930c9b8c3?auto=format&fit=crop&w=1600&q=80", // ✅ working image
             },
             {
               title: "Roof Replacement",
@@ -122,7 +123,7 @@ export default function Home() {
           </p>
           <div className="relative w-full max-w-3xl h-80 mx-auto mb-10 rounded-xl shadow-xl overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1600585153847-26b4e61b8b13?auto=format&fit=crop&w=1600&q=80"
+              src="https://images.unsplash.com/photo-1600585154206-13e1f83e1ac6?auto=format&fit=crop&w=1600&q=80" // ✅ new roofing at work image
               alt="Roofing team at work"
               fill
               sizes="(max-width: 1024px) 100vw, 800px"
@@ -155,6 +156,52 @@ export default function Home() {
       <footer className="bg-gray-900 text-gray-400 text-center py-6">
         <p>© {new Date().getFullYear()} Fast & Son Roofing • Portland, OR</p>
       </footer>
+
+      {/* Chatbot Widget */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="bg-orange-600 text-white rounded-full p-4 shadow-lg hover:bg-orange-500 transition"
+        >
+          💬
+        </button>
+        {isOpen && (
+          <div className="bg-white shadow-2xl rounded-xl w-80 mt-3 overflow-hidden border border-gray-200 flex flex-col">
+            <div className="bg-orange-600 text-white text-center font-semibold py-2">
+              Fast & Son Roofing AI
+            </div>
+            <div className="flex-1 p-3 overflow-y-auto max-h-64">
+              {messages.map((msg, i) => (
+                <div
+                  key={i}
+                  className={`my-1 p-2 rounded-lg text-sm ${
+                    msg.sender === "user"
+                      ? "bg-orange-600 text-white self-end ml-auto max-w-[80%]"
+                      : "bg-gray-100 text-gray-900 self-start mr-auto max-w-[80%]"
+                  }`}
+                >
+                  {msg.text}
+                </div>
+              ))}
+            </div>
+            <form onSubmit={handleSubmit} className="flex border-t border-gray-300">
+              <input
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Type a message..."
+                className="flex-1 p-2 text-sm outline-none"
+              />
+              <button
+                type="submit"
+                className="bg-orange-600 text-white px-4 hover:bg-orange-500 transition"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
