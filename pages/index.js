@@ -1,13 +1,54 @@
 import { useState } from "react";
 
 export default function Home() {
+  // --- Chatbot State ---
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState("");
+
+  // --- Chat Logic ---
+  const appendMessage = (text, sender) => {
+    setMessages((prev) => [...prev, { text, sender }]);
+  };
+
+  const handleChatSubmit = async (e) => {
+    e.preventDefault();
+    if (!input.trim()) return;
+    appendMessage(input, "user");
+    setInput("");
+    appendMessage("Fast & Son AI is typing...", "bot");
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: input }),
+      });
+      if (!res.ok) throw new Error("Chat request failed");
+      const data = await res.json();
+      setMessages((prev) =>
+        prev.map((msg) =>
+          msg.sender === "bot" && msg.text === "Fast & Son AI is typing..."
+            ? { text: data.reply, sender: "bot" }
+            : msg
+        )
+      );
+    } catch {
+      setMessages((prev) =>
+        prev.map((msg) =>
+          msg.sender === "bot" && msg.text === "Fast & Son AI is typing..."
+            ? { text: "Error: Could not get response", sender: "bot" }
+            : msg
+        )
+      );
+    }
+  };
+
+  // --- Contact Form ---
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
@@ -137,6 +178,53 @@ export default function Home() {
         <p>© {new Date().getFullYear()} Fast & Son Roofing</p>
         <p>Portland, OR • (503) 254-2046</p>
       </footer>
+
+      {/* --- Chatbot Widget --- */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <button
+          onClick={() => setIsChatOpen(!isChatOpen)}
+          className="bg-orange-600 text-white rounded-full p-4 shadow-lg hover:bg-orange-500 transition"
+        >
+          💬
+        </button>
+
+        {isChatOpen && (
+          <div className="bg-white border border-gray-200 shadow-2xl rounded-xl w-80 mt-3 flex flex-col overflow-hidden">
+            <div className="bg-orange-600 text-white text-center font-semibold py-2">
+              Fast & Son Roofing AI
+            </div>
+            <div className="flex-1 p-3 overflow-y-auto max-h-64">
+              {messages.map((msg, i) => (
+                <div
+                  key={i}
+                  className={`my-1 p-2 rounded-lg text-sm ${
+                    msg.sender === "user"
+                      ? "bg-orange-600 text-white self-end ml-auto max-w-[80%]"
+                      : "bg-gray-100 text-gray-900 self-start mr-auto max-w-[80%]"
+                  }`}
+                >
+                  {msg.text}
+                </div>
+              ))}
+            </div>
+            <form onSubmit={handleChatSubmit} className="flex border-t border-gray-300">
+              <input
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Ask a question..."
+                className="flex-1 p-2 text-sm outline-none"
+              />
+              <button
+                type="submit"
+                className="bg-orange-600 text-white px-4 hover:bg-orange-500 transition"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
