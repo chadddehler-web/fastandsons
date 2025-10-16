@@ -83,8 +83,8 @@ export default function Home() {
           Quality You Can Trust
         </h3>
         <img
-          src="https://tse4.mm.bing.net/th/id/OIP.2yQggm8ThLiA-ipOV9w8PAHaE8?cb=12&w=474&h=474&c=7&p=0"
-          alt="Roofing you can trust"
+          src="https://st3.depositphotos.com/5339154/16068/i/600/depositphotos_160685324-stock-photo-construction-worker-putting-the-asphalt.jpg"
+          alt="Construction worker putting asphalt"
           className="rounded-2xl mx-auto shadow-lg mb-8 w-full max-w-3xl"
         />
         <p className="max-w-3xl mx-auto text-gray-700 mb-4">
