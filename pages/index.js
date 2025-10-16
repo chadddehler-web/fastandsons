@@ -116,6 +116,8 @@ export default function Home() {
               <img
                 src={svc.img}
                 alt={svc.title}
+                crossOrigin="anonymous"
+                loading="lazy"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
@@ -146,6 +148,8 @@ export default function Home() {
           <img
             src="https://images.unsplash.com/photo-1581092160562-40aa08e78834?auto=format&fit=crop&w=1200&q=80"
             alt="Roofing team at work"
+            crossOrigin="anonymous"
+            loading="lazy"
             className="rounded-xl shadow-xl mx-auto mb-10 w-full max-w-3xl"
           />
           <h4 className="text-2xl font-semibold text-gray-800 mt-6">
@@ -170,6 +174,8 @@ export default function Home() {
         <img
           src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80"
           alt="House roof"
+          crossOrigin="anonymous"
+          loading="lazy"
           className="rounded-xl shadow-md mx-auto mb-8 w-full max-w-3xl"
         />
         <div className="max-w-xl mx-auto text-lg text-gray-700 space-y-3">
