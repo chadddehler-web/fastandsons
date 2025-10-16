@@ -57,7 +57,7 @@ export default function Home() {
       {/* Hero Section */}
       <header id="home" className="relative text-white text-center py-28 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80"
+          src="https://images.unsplash.com/photo-1600607688963-5e1c3d3850f2?auto=format&fit=crop&w=1600&q=80"
           alt="Roofing banner"
           className="absolute inset-0 w-full h-full object-cover brightness-75"
         />
@@ -83,7 +83,7 @@ export default function Home() {
           Quality You Can Trust
         </h3>
         <img
-          src="https://images.unsplash.com/photo-1603575448363-3f04b63d8c4d?auto=format&fit=crop&w=1600&q=80"
+          src="https://images.unsplash.com/photo-1597004959196-fdb51ebc70c6?auto=format&fit=crop&w=1600&q=80"
           alt="Roofing you can trust"
           className="rounded-2xl mx-auto shadow-lg mb-8 w-full max-w-3xl"
         />
@@ -111,7 +111,7 @@ export default function Home() {
           craftsmanship, and care.
         </p>
         <img
-          src="https://images.unsplash.com/photo-1601758125946-6ec2ef642f97?auto=format&fit=crop&w=1600&q=80"
+          src="https://images.unsplash.com/photo-1618220041046-1a6a392b7798?auto=format&fit=crop&w=1600&q=80"
           alt="Roofers working"
           className="rounded-2xl mx-auto shadow-lg w-full max-w-3xl"
         />
@@ -126,7 +126,7 @@ export default function Home() {
           communication, and long-lasting results.
         </p>
         <img
-          src="https://images.unsplash.com/photo-1621905251918-3e7a8b0c4a57?auto=format&fit=crop&w=1600&q=80"
+          src="https://images.unsplash.com/photo-1605379399843-5870eea9b74e?auto=format&fit=crop&w=1600&q=80"
           alt="Roofing Team"
           className="rounded-2xl mx-auto shadow-lg w-full max-w-3xl"
         />
